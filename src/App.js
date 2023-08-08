@@ -1,4 +1,4 @@
-import { TodoCounter, TodoSearch, TodoList, TodoItem } from './todos';
+import { TodoCounter, TodoSearch, TodoList, TodoItem, CreateTodoButton} from './todos';
 import './App.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <TodoItem />
       </TodoList>
 
-      {/* <CreateTodoButton /> */}
+      <CreateTodoButton />
     </div>
   );
 }
