@@ -1,5 +1,4 @@
 import { TodoCounter, TodoSearch, TodoList, TodoItem, CreateTodoButton} from './todos';
-import './App.css';
 
 const defaultTodos = [
   { text: 'Finish React course', completed: false },
