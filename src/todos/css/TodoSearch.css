@@ -1,7 +1,10 @@
 .TodoSearch {
   text-align: center;
-  height: 25px;
+  height: 45px;
   border-radius: 5px;
+  width: 90%;
   /*border: 2px solid #DBC1B4; ES ROSADO*/
   border: 2px solid #BFDBC9;
+  margin-left: 5%;
+  
 }

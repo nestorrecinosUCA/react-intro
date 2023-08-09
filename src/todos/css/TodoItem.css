@@ -2,14 +2,27 @@
   color: #678F75;
   background-color: #DBC1B4;
   padding: 1px;
-  margin: 15px;
-  list-style: none;
+  margin-top: 15px;
   border-radius: 2px;
   text-align: center;
   display: flex;
   align-items: center;
+  width: 90%;
 }
 
 .flexItem {
   flex: 1;
+}
+
+.deleteButton {
+  color: rgba(255, 0, 0, 0.753);
+  cursor: default;
+}
+
+.deleteButton:hover {
+  color: rgba(255, 0, 0, 0.582);
+}
+
+.completeButton {
+  color: rgb(0, 194, 0);
 }

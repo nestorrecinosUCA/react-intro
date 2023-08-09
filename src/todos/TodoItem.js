@@ -5,9 +5,9 @@ function TodoItem(props) {
   const { text, completed } = todo;
   return (
     <li className='TodoItem'>
-      <span className='flexItem'>V</span>
+      <span className='completeButton flexItem'>V</span>
       <p className='flexItem'>{text}</p>
-      <span className='flexItem'>X</span>
+      <span className='flexItem deleteButton'>X</span>
     </li>
   );
 }

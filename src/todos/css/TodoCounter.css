@@ -4,4 +4,9 @@ h1 {
   margin: 0;
   padding: 48px;
   color: #BFDBC9;
+  font-weight: 500;
+}
+
+h1 span {
+  font-weight: 1000;
 }

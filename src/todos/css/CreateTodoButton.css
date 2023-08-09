@@ -1,15 +1,21 @@
 .CreateTodoButton {
   /* background-color: #677C8F; */
   background-color: #A9C4DB;
-  border-radius: 100%;
-  height: 50px;
-  width: 50px;
   border: none;
-  transition: all ease-in-out .2s;
-  font-size: 30px;
-  font-weight: bolder;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: bold;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
   color: white;
-  margin-left: 85%;
+  display: flex;
+  justify-content: center;
+  height: 64px;
+  width: 64px;
+  transform: rotate(0);
+  transition: ease .2s;
 }
 
 .CreateTodoButton:hover {
