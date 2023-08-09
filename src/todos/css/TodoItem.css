@@ -13,16 +13,26 @@
 .flexItem {
   flex: 1;
 }
-
-.deleteButton {
-  color: rgba(255, 0, 0, 0.753);
+.Icon {
   cursor: default;
 }
 
-.deleteButton:hover {
-  color: rgba(255, 0, 0, 0.582);
+.DeleteButton {
+  color: rgba(255, 0, 0, 0.753);
 }
 
-.completeButton {
+.DeleteButton:hover {
+  color: rgba(156, 0, 0, 0.582);
+}
+
+.CompleteButton {
   color: rgb(0, 194, 0);
+}
+
+.CompleteButton:hover {
+  color: green;
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
 }

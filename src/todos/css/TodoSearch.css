@@ -6,5 +6,9 @@
   /*border: 2px solid #DBC1B4; ES ROSADO*/
   border: 2px solid #BFDBC9;
   margin-left: 5%;
-  
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;;
+}
+
+.TodoSearch:focus {
+  outline-color: #DBC1B4;
 }
