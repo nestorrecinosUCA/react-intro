@@ -16,6 +16,11 @@ function App() {
   console.log('Usears searched', searchValue);
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+  const searchedTodos = todos.filter((todo) => {
+    const text = todo.text.toLowerCase(); 
+    const searchText = searchValue.toLowerCase();
+    return text.includes(searchText);
+  })
   return (
     <div className="App">
       <TodoCounter completed={completedTodos} total={totalTodos}/>
@@ -25,7 +30,7 @@ function App() {
       />
 
       <TodoList>
-        {defaultTodos.map(todo =>
+        {searchedTodos.map(todo =>
           <TodoItem
             key={todo.text}
             todo={todo}
