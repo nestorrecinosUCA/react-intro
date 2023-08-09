@@ -4,7 +4,7 @@ import './App.css';
 const defaultTodos = [
   { text: 'Finish React course', completed: false },
   { text: 'Create a github repo for React course', completed: true },
-  { text: 'Change images for webpage', completed: false },
+  { text: 'Change images for webpage', completed: true },
   { text: 'Update favicon', completed: false},
 ]
 
