@@ -1,11 +1,13 @@
+import './css/TodoItem.css';
+
 function TodoItem(props) {
   const { todo } = props;
   const { text, completed } = todo;
   return (
-    <li>
-      <span>V</span>
-      <p>{text}</p>
-      <span>X</span>
+    <li className='TodoItem'>
+      <span className='flexItem'>V</span>
+      <p className='flexItem'>{text}</p>
+      <span className='flexItem'>X</span>
     </li>
   );
 }

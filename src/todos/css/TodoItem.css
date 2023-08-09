@@ -1,0 +1,15 @@
+.TodoItem {
+  color: #678F75;
+  background-color: #DBC1B4;
+  padding: 1px;
+  margin: 15px;
+  list-style: none;
+  border-radius: 2px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.flexItem {
+  flex: 1;
+}
