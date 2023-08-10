@@ -16,7 +16,8 @@
 .Icon {
   cursor: default;
   color: black;
-  font-weight: bold;
+  height: 25px;
+  width: 25px;
 }
 
 .DeleteButton:hover {
