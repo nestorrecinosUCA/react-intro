@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillCloseSquare, AiFillCheckSquare } from 'react-icons/ai';
-import './css/TodoItem.css';
+import './TodoItem.css';
 
 function TodoItem(props) {
   const { todo, onComplete, onDelete } = props;
