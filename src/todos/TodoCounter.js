@@ -6,12 +6,12 @@ function TodoCounter({ total, completed }) {
       <h1>
         You don't have any TODO 😥
       </h1>
-    )
+    );
   }
   if (total === completed) {
     return (
       <h1>Congratulations! 🎖 You have complete all your TODOs 🥳</h1>
-    )
+    );
   }
   return (
     <h1>
