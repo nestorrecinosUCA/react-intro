@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  TodoCounter, TodoSearch, TodoList, TodoItem, CreateTodoButton,
-} from '../todos';
 import { useLocalStorage } from './useLocalStorage';
+import { AppUI } from './AppUI';
 import './App.css';
 
 /* const defaultTodos = [
@@ -41,26 +39,15 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <TodoCounter completed={completedTodos} total={totalTodos} />
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-
-      <TodoList>
-        {searchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            todo={todo}
-            onComplete={completeTodo}
-            onDelete={deleteTodo}
-          />
-        ))}
-      </TodoList>
-
-      <CreateTodoButton />
-    </div>
+    <AppUI
+      completedTodos={completedTodos}
+      totalTodos={totalTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      completeTodo={completeTodo}
+      deleteTodo={deleteTodo}
+    />
   );
 }
 
