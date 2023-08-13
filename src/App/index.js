@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   TodoCounter, TodoSearch, TodoList, TodoItem, CreateTodoButton,
-} from './todos';
+} from '../todos';
+import { useLocalStorage } from './useLocalStorage';
 import './App.css';
 
 /* const defaultTodos = [
@@ -14,21 +15,7 @@ import './App.css';
 localStorage.setItem('TODOS_V1', defaultTodos);
 localStorage.removeItem('TODOS_V1');
 */
-function useLocalStorage(itemKey, initialValue) {
-  const localStorageItems = localStorage.getItem(itemKey);
-  if (!localStorageItems) {
-    localStorage.setItem(itemKey, JSON.stringify(initialValue));
-  }
-  const parsedItems = localStorageItems ? JSON.parse(localStorageItems) : initialValue;
-  const [items, setItems] = React.useState(parsedItems);
 
-  const saveItems = (newItems) => {
-    setItems(newItems);
-    localStorage.setItem(itemKey, JSON.stringify(newItems));
-  };
-
-  return [items, saveItems];
-}
 function App() {
   const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
