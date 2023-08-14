@@ -1,12 +1,12 @@
 import React from 'react';
-import { FiLoader } from 'react-icons/fi';
+import { RiLoader4Line } from 'react-icons/ri';
 
 import './LoadingTodos.css';
 
 function LoadingTodos() {
   return (
-    <div>
-      <FiLoader className={`loadingIcon`} />
+    <div className={`loadingContainer`}>
+      <RiLoader4Line className={`loadingIcon`} />
     </div>
   );
 }

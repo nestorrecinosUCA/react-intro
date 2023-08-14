@@ -1,13 +1,14 @@
-div {
+.loadingContainer {
   width: 100%;
+  padding-top: 50px;
   text-align: center;
   animation: colorChange 4s linear infinite;
 }
 .loadingIcon {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   text-align: center;
-  animation: rotateIcon 3s linear infinite;
+  animation: rotateIcon 1.5s linear infinite;
 }
 
 @keyframes rotateIcon {
