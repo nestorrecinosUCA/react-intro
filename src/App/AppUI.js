@@ -1,5 +1,12 @@
 import {
-  TodoCounter, TodoSearch, TodoList, TodoItem, CreateTodoButton,
+  TodoCounter,
+  TodoSearch,
+  TodoList,
+  TodoItem,
+  CreateTodoButton,
+  LoadingTodos,
+  ErrorTodos,
+  EmptyTodos,
 } from '../todos';
 
 function AppUI({
@@ -22,9 +29,12 @@ function AppUI({
       />
 
       <TodoList>
-        {loading && <p>Estamos cargando...</p>}
-        {error && <p>Hubo un error</p>}
-        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO!</p>}
+        {loading && <LoadingTodos />}
+        {error && <ErrorTodos />}
+        {
+          (!loading && searchedTodos.length === 0)
+          && <EmptyTodos />
+        }
         {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}
