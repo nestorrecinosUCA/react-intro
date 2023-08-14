@@ -15,7 +15,12 @@ localStorage.removeItem('TODOS_V1');
 */
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    items: todos,
+    saveItems: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
 
   const completeTodo = (text) => {
@@ -47,6 +52,8 @@ function App() {
       searchedTodos={searchedTodos}
       completeTodo={completeTodo}
       deleteTodo={deleteTodo}
+      loading={loading}
+      error={error}
     />
   );
 }

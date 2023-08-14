@@ -3,7 +3,15 @@ import {
 } from '../todos';
 
 function AppUI({
-  completedTodos, totalTodos, searchValue, setSearchValue, searchedTodos, completeTodo, deleteTodo,
+  loading,
+  error,
+  completedTodos,
+  totalTodos,
+  searchValue,
+  setSearchValue,
+  searchedTodos,
+  completeTodo,
+  deleteTodo,
 }) {
   return (
     <>
@@ -14,6 +22,9 @@ function AppUI({
       />
 
       <TodoList>
+        {loading && <p>Estamos cargando...</p>}
+        {error && <p>Hubo un error</p>}
+        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO!</p>}
         {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}
