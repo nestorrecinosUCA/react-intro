@@ -32,7 +32,7 @@ function AppUI({
         {loading && <LoadingTodos />}
         {error && <ErrorTodos />}
         {
-          (!loading && searchedTodos.length === 0)
+          (!loading && !error && searchedTodos.length === 0)
           && <EmptyTodos />
         }
         {searchedTodos.map((todo) => (
