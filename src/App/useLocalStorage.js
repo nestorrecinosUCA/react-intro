@@ -26,8 +26,6 @@ function useLocalStorage(itemKey, initialValue) {
     localStorage.setItem(itemKey, JSON.stringify(newItems));
   };
 
-  console.log(items);
-
   return {
     items,
     saveItems,
