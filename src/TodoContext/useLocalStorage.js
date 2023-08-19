@@ -35,3 +35,14 @@ function useLocalStorage(itemKey, initialValue) {
 }
 
 export { useLocalStorage };
+
+/* const defaultTodos = [
+  { text: 'Finish React course', completed: false },
+  { text: 'Create a github repo for React course', completed: true },
+  { text: 'Change images for webpage', completed: true },
+  { text: 'Update favicon', completed: false },
+  { text: 'User derived status', completed: true },
+];
+localStorage.setItem('TODOS_V1', defaultTodos);
+localStorage.removeItem('TODOS_V1');
+*/
