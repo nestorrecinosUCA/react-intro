@@ -35,7 +35,6 @@ function AppUI() {
           deleteTodo,
         }) => (
           <TodoList>
-            {console.log(completeTodo)}
             {loading && <LoadingTodos />}
             {error && <ErrorTodos />}
             {
