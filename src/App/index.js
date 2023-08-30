@@ -26,7 +26,8 @@ function App() {
     openModal,
     setOpenModal,
     completedTodos,
-    totalTodos
+    totalTodos,
+    addTodo
   } = useTodos();
 
   return (
@@ -39,7 +40,26 @@ function App() {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
-      <TodoList>
+
+      <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        onError={() => <ErrorTodos />}
+        onLoading={() => <LoadingTodos />}
+        onEmptyTodos={() => <EmptyTodos />}
+        render={todo =>
+        searchedTodos.map((todo) => (
+          <TodoItem
+            key={todo.text}
+            todo={todo}
+            onComplete={completeTodo}
+            onDelete={deleteTodo}
+          />
+          )
+        )}
+      />
+      {/* <TodoList>
         {loading && <LoadingTodos />}
         {error && <ErrorTodos />}
         {
@@ -54,7 +74,7 @@ function App() {
             onDelete={deleteTodo}
           />
         ))}
-      </TodoList>
+      </TodoList> */}
       <CreateTodoButton
         setOpenModal={setOpenModal}
       />
