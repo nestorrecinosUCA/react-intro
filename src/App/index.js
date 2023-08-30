@@ -59,22 +59,7 @@ function App() {
           )
         )}
       />
-      {/* <TodoList>
-        {loading && <LoadingTodos />}
-        {error && <ErrorTodos />}
-        {
-          (!loading && !error && searchedTodos.length === 0)
-          && <EmptyTodos />
-        }
-        {searchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            todo={todo}
-            onComplete={completeTodo}
-            onDelete={deleteTodo}
-          />
-        ))}
-      </TodoList> */}
+
       <CreateTodoButton
         setOpenModal={setOpenModal}
       />
